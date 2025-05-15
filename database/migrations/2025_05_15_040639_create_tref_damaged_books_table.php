@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('tref_damaged_books', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('book_id')->constrained('tm_books')->onDelete('cascade');
+            $table->date('damaged_at');
+            $table->smallInteger('quantity');
+            $table->text('description');
             $table->timestamps();
         });
     }
