@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('tref_borrow_status', function (Blueprint $table) {
             $table->id();
+            $table->varchar('name');
             $table->timestamps();
         });
     }

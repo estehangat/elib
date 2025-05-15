@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('tm_bookmarks', function (Blueprint $table) {
             $table->id();
+            $table->int('user_id');
+            $table->int('book_id');
             $table->timestamps();
         });
     }

@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('announcements', function (Blueprint $table) {
             $table->id();
+            $table->int('user_id');
+            $table->varchar('head');
+            $table->varchar('messages');
             $table->timestamps();
         });
     }
