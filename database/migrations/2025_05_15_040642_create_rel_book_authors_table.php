@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('rel_book_authors', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('book_id')->constrained('tm_books')->onDelete('cascade');
+            $table->foreignId('author_id')->constrained('tm_authors')->onDelete('cascade');
             $table->timestamps();
         });
     }

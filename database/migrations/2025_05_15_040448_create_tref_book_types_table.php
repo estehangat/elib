@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('tref_book_types', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
             $table->timestamps();
         });
     }

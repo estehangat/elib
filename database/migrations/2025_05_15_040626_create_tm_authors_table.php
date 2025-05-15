@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('tm_authors', function (Blueprint $table) {
             $table->id();
+            $table->string('prefix');
+            $table->string('name');
+            $table->string('suffix');
+            $table->string('bio');
             $table->timestamps();
         });
     }

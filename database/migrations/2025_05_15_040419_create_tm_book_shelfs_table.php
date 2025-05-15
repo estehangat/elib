@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('tm_book_shelfs', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->foreignId('room_id')->constrained('tm_rooms')->onDelete('cascade');
             $table->timestamps();
         });
     }

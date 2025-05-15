@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('tm_waiting_lists', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
+            $table->foreignId('book_id')->constrained('tm_books')->onDelete('cascade');
             $table->timestamps();
         });
     }
