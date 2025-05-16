@@ -24,7 +24,7 @@ return new class extends Migration
             $table->foreignId('language_id')->constrained('tref_languages')->onDelete('cascade');
             $table->foreignId('category_id')->constrained('tref_categories')->onDelete('cascade');
             $table->foreignId('shelf_id')->constrained('tm_book_shelfs')->onDelete('cascade');
-            $table->foreignId('publisher_id')->constrained('tref_publishers')->onDelete('cascade');
+            $table->foreignId('publisher_id')->constrained('tm_publishers')->onDelete('cascade');
             $table->foreignId('genre_id')->constrained('tref_genres')->onDelete('cascade');
             $table->foreignId('type_id')->constrained('tref_book_types')->onDelete('cascade');
             $table->timestamps();
